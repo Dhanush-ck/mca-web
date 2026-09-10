@@ -1,49 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Web Technology</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
-
     <header>
-        <a href="#client-server">Client/Server</a>
-        <a href="">Web Application</a>
+        <div class="header-top">
+            <button id="hamburger-btn" class="hamburger" aria-label="Toggle Menu">
+                <i class="bi bi-list"></i>
+            </button>
+            <h1>Web Technology</h1>
+            <div class="header-spacer"></div>
+        </div>
+
+        <nav id="nav-menu">
+            <a href="#client-server">Client/Server</a>
+            <a href="#web-application">Web Application</a>
+            <a href="#web-content">Web Content</a>
+            <a href="#http">HTTP</a>
+            <a href="#dynamic-pages">Dynamic Pages</a>
+            <a href="#application-server">Application Servers</a>
+            <a href="#web-security">Web Security</a>
+        </nav>
     </header>
-    
-    <section id="client-server" class="section">
-        <div class="client card">
-            <div class="card-header">
-                <i class="bi bi-people-fill client-server-logo"></i>
-                <span class="client-server-heading">Client</span>
-            </div>
-            <p>
-                A client is a device or application that requests services or resources from a server over a network. When a user enters a website address in a browser, the browser acts as a client and sends a request to the web server.
-            </p>
-            <ul>
-                <li>Web browsers such as Chrome, Firefox and Edge</li>
-                <li>Mobile applications</li>
-                <li>Desktop applications</li>
-            </ul>
-        </div>
 
-        <div class="server card">
-            <div class="card-header">
-                <i class="bi bi-hdd-stack-fill client-server-logo"></i>
-                <span class="client-server-heading">Server</span>
-            </div>
-            <p>
-                A server is a computer or software system that provides services, data, or resources to clients over a network. A web server receives requests from clients and sends the requested web pages or other resources as responses.
-            </p>
-            <ul>
-                <li>When you visit a website, your browser sends a request to the website's server, and the server sends the webpage back.</li>
-            </ul>
-        </div>
-    </section>
 
+    <main>
+        <section id="client-server" class="section">
+            <h2 class="section-header">Client &amp; Server</h2>
+            <div class="client-server-container">
+                <article class="client card">
+                    <div class="card-header">
+                        <i class="bi bi-people-fill client-server-logo"></i>
+                        <h3 class="client-server-heading">Client</h3>
+                    </div>
+                    <p>
+                        A client is a device or application that requests services or resources from a server over a network. When a user enters a website address in a browser, the browser acts as a client and sends a request to the web server.
+                    </p>
+                    <ul class="styled-list">
+                        <li>Web browsers such as Chrome, Firefox and Edge</li>
+                        <li>Mobile applications</li>
+                        <li>Desktop applications</li>
+                    </ul>
+                </article>
+
+                <article class="server card">
+                    <div class="card-header">
+                        <i class="bi bi-hdd-stack-fill client-server-logo"></i>
+                        <h3 class="client-server-heading">Server</h3>
+                    </div>
+                    <p>
+                        A server is a computer or software system that provides services, data, or resources to clients over a network. A web server receives requests from clients and sends the requested web pages or other resources as responses.
+                    </p>
+                    <ul class="styled-list">
+                        <li>Receives requests from clients</li>
+                        <li>Processes the requested information</li>
+                        <li>Sends the requested resources as a response</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="web-application" class="section">
+            <h2 class="section-header">Components of Web Application</h2>
+            
+            <div class="dynamic-tabs-container">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-target="view-layer">View Layer</button>
+                    <button class="tab-btn" data-target="business-layer">Business Layer</button>
+                    <button class="tab-btn" data-target="data-layer">Data Access Layer</button>
+                </div>
+
+                <div id="layer-items" class="tab-content">
+                    <article id="view-layer" class="item active-layer">
+                        <h3>View Layer</h3>
+                        <p>The View Layer is the part of an application that the user sees and interacts with. It is responsible for displaying information and collecting user input.</p>
+                        <p><strong>Technologies:</strong> HTML, CSS and JavaScript.</p>
+                        <p><strong>Examples:</strong> Forms, buttons, menus and webpage layouts.</p>
+                    </article>
+
+                    <article id="business-layer" class="item">
+                        <h3>Business Layer</h3>
+                        <p>The Business Layer contains the application's logic and rules. It processes user requests and determines what should happen based on the application's requirements.</p>
+                        <p><strong>Example:</strong> Checking whether a username and password are correct during login.</p>
+                    </article>
+
+                    <article id="data-layer" class="item">
+                        <h3>Data Access Layer</h3>
+                        <p>The Data Access Layer is responsible for communicating with databases or other data storage systems. It retrieves, adds, updates, or deletes data.</p>
+                        <p><strong>Example:</strong> Retrieving a user's profile information from a database.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="web-content" class="section">
+            <h2 class="section-header">Types of Web Content</h2>
+            <div class="web-content-grid">
+                <article class="grid-item card">
+                    <h3 class="item-header">Text</h3>
+                    <p>Text is the most basic type of web content.</p>
+                    <div class="item-list">
+                        <span>Headings</span><span>Paragraphs</span><span>Articles</span><span>Menus</span><span>Links</span>
+                    </div>
+                </article>
+
+                <article class="grid-item card">
+                    <h3 class="item-header">Images</h3>
+                    <p>Images make webpages more attractive and help communicate information visually.</p>
+                    <div class="item-list">
+                        <span>JPEG/JPG</span><span>PNG</span><span>GIF</span><span>WebP</span><span>Logos</span><span>Icons</span>
+                    </div>
+                </article>
+
+                <article class="grid-item card">
+                    <h3 class="item-header">Audio</h3>
+                    <p>Audio allows websites to provide sound or music.</p>
+                    <div class="item-list">
+                        <span>Music</span><span>Podcasts</span><span>Voice recordings</span><span>Sound effects</span>
+                    </div>
+                </article>
+
+                <article class="grid-item card">
+                    <h3 class="item-header">Video</h3>
+                    <p>Video combines moving images and sound to present information.</p>
+                    <div class="item-list">
+                        <span>Movies</span><span>Tutorials</span><span>Advertisements</span><span>Educational videos</span>
+                    </div>
+                </article>
+
+                <article class="grid-item card">
+                    <h3 class="item-header">Animation</h3>
+                    <p>Animation involves creating movement or visual changes on a webpage.</p>
+                    <div class="item-list">
+                        <span>Loading animations</span><span>Moving objects</span><span>Animated menus</span><span>CSS transitions</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="http" class="section">
+            <h2 class="section-header">HTTP and HTTP Request</h2>
+            <article>
+                <h3 class="section-sub-header">Definition of HTTP</h3>
+                <p>HTTP stands for <strong>HyperText Transfer Protocol</strong>. It is a communication protocol used to transfer resources between a client and a web server.</p>
+            </article>
+
+            <article id="request-response">
+                <h3 class="section-sub-header">HTTP Request and Response</h3>
+                <p>An <strong>HTTP request</strong> is a message sent by the client to the server asking for a resource or requesting an action.</p>
+                <div class="list item-list">
+                    <span>GET - Request data</span>
+                    <span>POST - Send data</span>
+                    <span>PUT - Update data</span>
+                    <span>DELETE - Delete data</span>
+                    <span class="highlight-chip">QUERY - Search/Query data</span>
+                </div>
+                <p>An <strong>HTTP response</strong> is the message sent by the server back to the client. It contains:</p>
+                <div class="list item-list">
+                    <span>Status code</span>
+                    <span>Headers</span>
+                    <span>Requested content</span>
+                </div>
+            </article>
+        </section>
+
+        <section id="dynamic-pages" class="section">
+            <h2 class="section-header">Dynamic Web Pages</h2>
+            <p>A dynamic web page is a webpage whose content can change based on user interaction, data, time, or other conditions.</p>
+            <h3 class="section-sub-header">Characteristics</h3>
+            <div class="list item-list">
+                <span>Changes based on input</span>
+                <span>Retrieves from databases</span>
+                <span>Personalized content</span>
+                <span>Responds to interactions</span>
+            </div>
+        </section>
+
+        <section id="application-server" class="section">
+            <h2 class="section-header">Application Servers</h2>
+            <p>An application server is software that provides an environment for running application logic and processing client requests.</p>
+            
+            <h3 class="section-sub-header">Simple Architecture</h3>
+            <div class="architecture">
+                <div class="arch-box">Client</div>
+                <i class="bi bi-arrow-right"></i>
+                <div class="arch-box">Web Server</div>
+                <i class="bi bi-arrow-right"></i>
+                <div class="arch-box">Application Server</div>
+                <i class="bi bi-arrow-right"></i>
+                <div class="arch-box">Database</div>
+            </div>
+        </section>
+
+        <section id="web-security" class="section">
+            <h2 class="section-header">Web Security</h2>
+            <div class="security-list">
+                <div class="card security-card">
+                    <strong>HTTPS</strong>
+                    <p>Encrypts communication between the browser and the server.</p>
+                </div>
+                <div class="card security-card">
+                    <strong>Strong Passwords</strong>
+                    <p>Strong and unique passwords help prevent unauthorized access.</p>
+                </div>
+                <div class="card security-card">
+                    <strong>Input Validation</strong>
+                    <p>Checked before processing to prevent malicious data from being submitted.</p>
+                </div>
+                <div class="card security-card">
+                    <strong>Authentication & Authorization</strong>
+                    <p>Verifies identity and determines what an authenticated user can access.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Dhanush C K</p>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
