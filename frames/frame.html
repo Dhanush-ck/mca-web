@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Frames</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #111;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            padding: clamp(20px, 5vw, 50px);
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 15px;
+            background: #333;
+            border-radius: 20px;
+            color: #aaa;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: clamp(28px, 5vw, 45px);
+            margin-bottom: 12px;
+        }
+
+        .intro {
+            max-width: 800px;
+            color: #aaa;
+            line-height: 1.7;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .section {
+            margin-bottom: 25px;
+            padding: 25px;
+            background: #1c1c1c;
+            border: 1px solid #333;
+            border-radius: 15px;
+        }
+
+        .section h2 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .section p {
+            color: #aaa;
+            line-height: 1.6;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .old {
+            border-left: 4px solid #777;
+        }
+
+        .new {
+            border-left: 4px solid #aaa;
+        }
+
+        .label {
+            display: inline-block;
+            padding: 5px 10px;
+            margin-bottom: 12px;
+            background: #333;
+            border-radius: 5px;
+            font-size: 12px;
+            color: #ccc;
+        }
+
+        pre {
+            padding: 18px;
+            background: #0a0a0a;
+            border-radius: 8px;
+            overflow-x: auto;
+            color: #ccc;
+            font-family: Consolas, monospace;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .comparison {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .comparison th,
+        .comparison td {
+            padding: 12px;
+            border: 1px solid #333;
+            text-align: left;
+            font-size: 13px;
+        }
+
+        .comparison th {
+            background: #292929;
+            color: white;
+        }
+
+        .comparison td {
+            color: #aaa;
+        }
+
+        .note {
+            margin-top: 25px;
+            padding: 18px;
+            background: #1c1c1c;
+            border-radius: 10px;
+            border: 1px solid #333;
+            color: #aaa;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .section {
+                padding: 18px;
+            }
+
+            .comparison {
+                font-size: 12px;
+            }
+
+            .comparison th,
+            .comparison td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <span class="tag">HTML FRAMES</span>
+
+    <h1>About Frames</h1>
+
+    <p class="intro">
+        Frames allow different HTML documents to be displayed in
+        separate sections of a webpage. HTML has traditionally
+        provided frames using the &lt;frame&gt; element, while modern
+        webpages use the &lt;iframe&gt; element for embedding content.
+    </p>
+
+    <section class="section old">
+
+        <span class="label">OLD METHOD</span>
+
+        <h2>&lt;frame&gt; and &lt;frameset&gt;</h2>
+
+        <p>
+            In older versions of HTML, the &lt;frameset&gt; element
+            was used to divide the browser window into multiple
+            sections. Each section was created using a
+            &lt;frame&gt; element.
+        </p>
+
+        <p>
+            A separate HTML document could be loaded into each frame.
+            The size of the frames could be specified using rows or
+            columns.
+        </p>
+
+        <pre>
+&lt;frameset cols="20%,80%"&gt;
+    &lt;frame src="menu.html"&gt;
+    &lt;frame src="home.html" name="content"&gt;
+&lt;/frameset&gt;</pre>
+
+        <p style="margin-top: 15px;">
+            The menu frame could then use the target attribute to
+            open pages in the content frame.
+        </p>
+
+        <pre>&lt;a href="about.html" target="content"&gt;
+    About Frames
+&lt;/a&gt;
+        </pre>
+
+    </section>
+
+    <section class="section new">
+
+        <span class="label">MODERN METHOD</span>
+
+        <h2>&lt;iframe&gt;</h2>
+
+        <p>
+            The &lt;iframe&gt; element is the modern way to embed
+            another HTML document inside a webpage. Unlike the old
+            &lt;frame&gt; element, an iframe can be placed inside the
+            normal HTML &lt;body&gt;.
+        </p>
+
+        <p>
+            CSS can be used to control its size, position, layout,
+            and responsiveness.
+        </p>
+
+        <pre>&lt;div class="container"&gt;
+
+    &lt;iframe src="menu.html"
+            class="menu-frame"&gt;
+    &lt;/iframe&gt;
+
+    &lt;iframe src="home.html"
+            name="content"
+            class="content-frame"&gt;
+    &lt;/iframe&gt;
+
+&lt;/div&gt;</pre>
+
+        <p style="margin-top: 15px;">
+            A link can load its webpage inside the iframe using
+            the target attribute.
+        </p>
+
+        <pre>&lt;a href="about.html"
+   target="content"&gt;
+    About Frames
+&lt;/a&gt;</pre>
+
+    </section>
+
+    <section class="section">
+
+        <h2>Old vs Modern</h2>
+
+        <table class="comparison">
+
+            <tr>
+                <th>Feature</th>
+                <th>&lt;frame&gt;</th>
+                <th>&lt;iframe&gt;</th>
+            </tr>
+
+            <tr>
+                <td>HTML element</td>
+                <td>&lt;frame&gt;</td>
+                <td>&lt;iframe&gt;</td>
+            </tr>
+
+            <tr>
+                <td>Used with</td>
+                <td>&lt;frameset&gt;</td>
+                <td>Normal HTML body</td>
+            </tr>
+
+            <tr>
+                <td>HTML5</td>
+                <td>Obsolete</td>
+                <td>Supported</td>
+            </tr>
+
+            <tr>
+                <td>CSS styling</td>
+                <td>Limited</td>
+                <td>Flexible</td>
+            </tr>
+
+            <tr>
+                <td>Responsive design</td>
+                <td>Difficult</td>
+                <td>Easy with CSS</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+
+    <div class="note">
+        <strong>In this project:</strong>
+        The modern &lt;iframe&gt; element is used to create the
+        menu and content areas. The menu occupies 20% of the page,
+        while the content area occupies 80%. The
+        <strong>target</strong> attribute loads the selected page
+        inside the content iframe.
+    </div>
+
+</body>
+</html>
