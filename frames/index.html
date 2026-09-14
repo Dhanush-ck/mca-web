@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Frames Webpage</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231c1c1c'/><text x='50' y='70' text-anchor='middle' font-family='Arial' font-size='65' font-weight='bold' fill='white'>F</text></svg>"></link>
+
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                width: 100%;
+                height: 100vh;
+            }
+
+            .container {
+                display: flex;
+                width: 100%;
+                height: 100vh;
+            }
+
+            .menu-frame {
+                width: 20%;
+                height: 100%;
+                border: none;
+                min-width: 0;
+            }
+
+            .content-frame {
+                width: 80%;
+                height: 100%;
+                border: none;
+                min-width: 0;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <iframe src="./menu.html" class="menu-frame" name="menu"></iframe>
+
+            <iframe src="./home.html" class="content-frame" name="content"></iframe>
+
+        </div>
+
+    </body>
+</html>
