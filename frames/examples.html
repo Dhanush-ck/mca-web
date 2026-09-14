@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #111;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            padding: clamp(20px, 5vw, 50px);
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 15px;
+            background: #333;
+            border-radius: 20px;
+            color: #aaa;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: clamp(28px, 5vw, 45px);
+            margin-bottom: 12px;
+        }
+
+        .intro {
+            max-width: 750px;
+            color: #aaa;
+            line-height: 1.7;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .examples {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .card {
+            padding: 25px;
+            background: #1c1c1c;
+            border: 1px solid #333;
+            border-radius: 15px;
+        }
+
+        .number {
+            display: inline-flex;
+            width: 32px;
+            height: 32px;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            background: #333;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #aaa;
+            line-height: 1.6;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        pre {
+            padding: 15px;
+            background: #0a0a0a;
+            border: 1px solid #292929;
+            border-radius: 8px;
+            overflow-x: auto;
+            color: #ccc;
+            font-family: Consolas, monospace;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .full {
+            grid-column: 1 / -1;
+        }
+
+        .result {
+            margin-top: 15px;
+            padding: 12px;
+            background: #242424;
+            border-radius: 8px;
+            color: #aaa;
+            font-size: 13px;
+        }
+
+        @media (max-width: 700px) {
+            .examples {
+                grid-template-columns: 1fr;
+            }
+
+            .full {
+                grid-column: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <span class="tag">PRACTICAL EXAMPLES</span>
+
+    <h1>Frame Examples</h1>
+
+    <p class="intro">
+        The following examples demonstrate how frames and iframes
+        can be used to divide a webpage and display different
+        HTML documents.
+    </p>
+
+
+    <div class="examples">
+
+        <div class="card">
+
+            <span class="number">1</span>
+
+            <h2>Old Frame Layout</h2>
+
+            <p>
+                The traditional method used a frameset to divide
+                the browser window into multiple frames.
+            </p>
+
+            <pre>&lt;frameset cols="20%,80%"&gt;
+    &lt;frame src="menu.html"&gt;
+    &lt;frame src="home.html"&gt;
+&lt;/frameset&gt;</pre>
+
+            <div class="result">
+                Divides the window into 20% and 80% sections.
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <span class="number">2</span>
+
+            <h2>Modern Iframe</h2>
+
+            <p>
+                An iframe can embed another HTML document inside
+                a normal webpage.
+            </p>
+
+            <pre>&lt;iframe
+    src="home.html"
+    name="content"&gt;
+&lt;/iframe&gt;</pre>
+
+            <div class="result">
+                Displays home.html inside the iframe.
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <span class="number">3</span>
+
+            <h2>Target Attribute</h2>
+
+            <p>
+                The target attribute specifies where the linked
+                webpage should be displayed.
+            </p>
+
+            <pre>&lt;a href="about.html"
+   target="content"&gt;
+    About Frames
+&lt;/a&gt;</pre>
+
+            <div class="result">
+                Opens about.html inside the content iframe.
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <span class="number">4</span>
+
+            <h2>20 : 80 Layout</h2>
+
+            <p>
+                CSS can be used to create the required menu and
+                content layout using percentage widths.
+            </p>
+
+            <pre>.menu-frame {
+    width: 20%;
+}
+
+.content-frame {
+    width: 80%;
+}</pre>
+
+            <div class="result">
+                Menu occupies 20% and content occupies 80%.
+            </div>
+
+        </div>
+
+        <div class="card full">
+
+            <span class="number">5</span>
+
+            <h2>Complete Navigation</h2>
+
+            <p>
+                Combining an iframe with the target attribute
+                allows a navigation menu to control the content
+                displayed in another frame.
+            </p>
+
+            <pre>&lt;iframe
+    src="menu.html"
+    class="menu-frame"&gt;
+&lt;/iframe&gt;
+
+&lt;iframe
+    src="home.html"
+    name="content"
+    class="content-frame"&gt;
+&lt;/iframe&gt;</pre>
+
+            <div class="result">
+                The menu remains on the left while the selected
+                webpage opens in the 80% content area.
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html> 
