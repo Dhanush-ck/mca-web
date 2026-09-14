@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #111;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            padding: clamp(20px, 5vw, 60px);
+        }
+
+        .hero {
+            padding: clamp(30px, 5vw, 55px);
+            background: linear-gradient(135deg, #1e1e1e, #292929);
+            border: 1px solid #3a3a3a;
+            border-radius: 20px;
+            margin-bottom: 30px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 15px;
+            background: #333;
+            border-radius: 20px;
+            color: #aaa;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: clamp(30px, 5vw, 52px);
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 750px;
+            color: #bbb;
+            font-size: clamp(15px, 2vw, 18px);
+            line-height: 1.7;
+        }
+
+        .section-title {
+            margin-bottom: 18px;
+            font-size: clamp(20px, 3vw, 28px);
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .card-link {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .card {
+            height: 100%;
+            padding: 25px;
+            background: #1c1c1c;
+            border: 1px solid #333;
+            border-radius: 16px;
+            transition: 0.2s ease;
+        }
+
+        .card-link:hover .card {
+            transform: translateY(-5px);
+            background: #242424;
+            border-color: #555;
+        }
+
+        .icon {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            font-size: 19px;
+        }
+
+        .card p {
+            color: #999;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .note {
+            margin-top: 25px;
+            padding: 18px;
+            border-left: 3px solid #777;
+            background: #1a1a1a;
+            color: #aaa;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="hero">
+
+        <span class="tag">HTML & CSS</span>
+
+        <h1>Understanding HTML Frames</h1>
+
+        <p>
+            Welcome to our website dedicated to HTML frames.
+            Learn how webpages can be divided into sections and
+            how navigation can be used to display different pages
+            within a content area.
+        </p>
+
+    </section>
+
+
+    <h2 class="section-title">Explore the Website</h2>
+
+
+    <div class="cards">
+
+        <a href="frame.html" target="content" class="card-link">
+            <div class="card">
+
+                <div class="icon">▣</div>
+
+                <h3>About Frames</h3>
+
+                <p>
+                    Learn what HTML frames are, how they work, and
+                    understand concepts such as frames, iframes,
+                    and the target attribute.
+                </p>
+
+            </div>
+        </a>
+
+        <a href="examples.html" target="content" class="card-link">
+            <div class="card">
+
+                <div class="icon">◇</div>
+
+                <h3>Examples</h3>
+
+                <p>
+                    Explore practical examples of frame layouts,
+                    iframe usage, navigation, and displaying
+                    different webpages within a content frame.
+                </p>
+
+            </div>
+        </a>
+
+    </div>
+
+
+    <div class="note">
+        <strong>Tip:</strong>
+        Use the navigation menu or the cards above to switch
+        between the different pages. The selected page will be
+        displayed in the content area.
+    </div>
+
+</body>
+</html>
