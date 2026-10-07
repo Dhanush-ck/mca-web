@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>CSS Selectors</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+<div class="reference-page">
+
+    <div class="reference-header">
+
+        <span class="reference-label">
+            CSS REFERENCE / 02
+        </span>
+
+        <h1>CSS Selectors</h1>
+
+        <p>
+            Selectors identify the HTML elements that CSS rules
+            should be applied to.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="card-icon">*</div>
+
+            <h3>Universal</h3>
+
+            <p>
+                Selects every element.
+            </p>
+
+            <br>
+
+            <code>* { }</code>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">.</div>
+
+            <h3>Class</h3>
+
+            <p>
+                Selects elements by class.
+            </p>
+
+            <br>
+
+            <code>.box { }</code>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">#</div>
+
+            <h3>ID</h3>
+
+            <p>
+                Selects an element by ID.
+            </p>
+
+            <br>
+
+            <code>#header { }</code>
+
+        </div>
+
+    </div>
+
+
+    <h2>Selector Types</h2>
+
+
+    <div class="table-wrapper">
+
+        <table>
+
+            <tr>
+                <th>Selector</th>
+                <th>Name</th>
+                <th>Example</th>
+            </tr>
+
+            <tr>
+                <td><code>*</code></td>
+                <td>Universal</td>
+                <td><code>* { margin: 0; }</code></td>
+            </tr>
+
+            <tr>
+                <td><code>p</code></td>
+                <td>Element</td>
+                <td><code>p { color: red; }</code></td>
+            </tr>
+
+            <tr>
+                <td><code>.box</code></td>
+                <td>Class</td>
+                <td><code>.box { padding: 10px; }</code></td>
+            </tr>
+
+            <tr>
+                <td><code>#header</code></td>
+                <td>ID</td>
+                <td><code>#header { height: 80px; }</code></td>
+            </tr>
+
+            <tr>
+                <td><code>div p</code></td>
+                <td>Descendant</td>
+                <td><code>div p { color: blue; }</code></td>
+            </tr>
+
+            <tr>
+                <td><code>div &gt; p</code></td>
+                <td>Child</td>
+                <td><code>div &gt; p { color: green; }</code></td>
+            </tr>
+
+            <tr>
+                <td><code>a:hover</code></td>
+                <td>Pseudo-class</td>
+                <td><code>a:hover { color: red; }</code></td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
