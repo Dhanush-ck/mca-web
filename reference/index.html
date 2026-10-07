@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
+    
+    <title>CSS Reference</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="logo">
+            <span>&lt;/&gt;</span>
+            CSS Reference
+        </div>
+
+        <div class="header-links">
+            <span>Learn</span>
+            <span>Explore</span>
+            <span>Reference</span>
+        </div>
+
+    </header>
+
+
+    <div class="hero">
+
+        <div class="hero-content">
+
+            <span class="badge">
+                ✦ CSS DOCUMENTATION
+            </span>
+
+            <h1>
+                Master CSS.<br>
+                <span>One reference at a time.</span>
+            </h1>
+
+            <p>
+                Explore CSS properties, selectors, functions, units,
+                colors and browser compatibility in one place.
+            </p>
+
+        </div>
+
+        <div class="hero-decoration">
+            &lt;/&gt;
+        </div>
+
+    </div>
+
+
+    <div class="ticker">
+
+        <marquee>
+            ✦ CSS Properties &nbsp;&nbsp;&nbsp;
+            ✦ CSS Selectors &nbsp;&nbsp;&nbsp;
+            ✦ CSS Functions &nbsp;&nbsp;&nbsp;
+            ✦ CSS Units &nbsp;&nbsp;&nbsp;
+            ✦ CSS Colors &nbsp;&nbsp;&nbsp;
+            ✦ Browser Support
+        </marquee>
+
+    </div>
+
+
+    <main class="layout">
+
+        <aside class="sidebar">
+
+            <div class="menu-title">
+                <span>REFERENCE</span>
+                <small>9 topics</small>
+            </div>
+
+            <a href="pages/properties.html"
+            target="contentFrame"
+            class="menu-item active"
+            onclick="setActive(this)">
+                <span class="icon">◈</span>
+                <span>Properties</span>
+            </a>
+
+            <a href="pages/selectors.html"
+            target="contentFrame"
+            class="menu-item"
+            onclick="setActive(this)">
+                <span class="icon">⌘</span>
+                <span>Selectors</span>
+            </a>
+
+            <a href="pages/functions.html"
+            target="contentFrame"
+            class="menu-item"
+            onclick="setActive(this)">
+                <span class="icon">ƒ</span>
+                <span>Functions</span>
+            </a>
+
+            <a href="pages/animatable.html"
+            target="contentFrame"
+            class="menu-item"
+            onclick="setActive(this)">
+                <span class="icon">✦</span>
+                <span>Animatable</span>
+            </a>
+
+            <a href="pages/aural.html"
+            target="contentFrame"
+            class="menu-item"
+            onclick="setActive(this)">
+                <span class="icon">◉</span>
+                <span>Aural</span>
+            </a>
+
+            <a href="pages/units.html"
+            target="contentFrame"
+            class="menu-item"
+            onclick="setActive(this)">
+                <span class="icon">#</span>
+                <span>Units</span>
+            </a>
+
+            <a href="pages/colors.html"
+            target="contentFrame"
+            class="menu-item"
+            onclick="setActive(this)">
+                <span class="icon">●</span>
+                <span>Colors</span>
+            </a>
+
+            <a href="pages/default-values.html"
+            target="contentFrame"
+            class="menu-item"
+            onclick="setActive(this)">
+                <span class="icon">=</span>
+                <span>Default Values</span>
+            </a>
+
+            <a href="pages/browser-support.html"
+            target="contentFrame"
+            class="menu-item"
+            onclick="setActive(this)">
+                <span class="icon">◫</span>
+                <span>Browser Support</span>
+            </a>
+
+        </aside>
+
+
+        <section class="content">
+
+            <iframe
+                src="pages/properties.html"
+                name="contentFrame"
+                title="CSS Reference Content">
+            </iframe>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            CSS Reference • Built with HTML & CSS
+        </p>
+
+    </footer>
+
+    <script>
+        function setActive(element) {
+            const menuItems = document.querySelectorAll(".menu-item");
+            menuItems.forEach(function(item) {
+                item.classList.remove("active");
+            });
+            element.classList.add("active");
+        }
+    </script>
+
+</body>
+
+</html>
