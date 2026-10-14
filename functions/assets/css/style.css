@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #7c3aed;
+    --light: #ede9fe;
+    --bg: #f7f7fb;
+    --text: #24213a;
+    --muted: #77758b;
+    --border: #e7e4ef;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+body.math {
+    --primary: #0891b2;
+    --light: #cffafe;
+    --bg: #f2f9fc;
+}
+
+header {
+    background: white;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+}
+
+header h2 {
+    font-size: 23px;
+}
+
+button {
+    cursor: pointer;
+    font: inherit;
+    border: 0;
+    border-radius: 8px;
+    padding: 11px 15px;
+}
+
+#mode, #copy, #reset {
+    background: var(--light);
+    color: var(--primary);
+    font-weight: 600;
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 35px 24px;
+}
+
+.intro {
+    margin-bottom: 28px;
+}
+
+.intro p {
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.intro h1 {
+    font-size: clamp(25px, 4vw, 34px);
+    margin-bottom: 10px;
+}
+
+.intro span, #opDesc, #message, .info p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 210px minmax(0, 1.3fr) minmax(220px, .8fr);
+    gap: 20px;
+    align-items: start;
+}
+
+nav, .panel, .output {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 22px;
+}
+
+nav h3 {
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: var(--muted);
+    margin-bottom: 15px;
+}
+
+nav ul {
+    list-style: none;
+    display: grid;
+    gap: 5px;
+}
+
+.nav-item {
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.nav-item:hover, .nav-item.active {
+    background: var(--light);
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.panel h2 {
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+#opDesc {
+    margin-bottom: 25px;
+}
+
+.field {
+    margin-bottom: 17px;
+}
+
+.field label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.field input, .field select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg);
+    color: var(--text);
+    outline: none;
+}
+
+.field input:focus, .field select:focus {
+    border-color: var(--primary);
+}
+
+.primary {
+    width: 100%;
+    background: var(--primary);
+    color: white;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.output h3 {
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+.result {
+    background: var(--light);
+    padding: 20px 15px;
+    border-radius: 10px;
+    min-height: 130px;
+    overflow-wrap: anywhere;
+}
+
+.result small {
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.result h2 {
+    margin-top: 15px;
+    font-size: 24px;
+    white-space: pre-wrap;
+}
+
+#message {
+    margin: 15px 0;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+.actions button {
+    flex: 1;
+    font-size: 12px;
+}
+
+.info {
+    border-top: 1px solid var(--border);
+    margin-top: 22px;
+    padding-top: 18px;
+}
+
+.info h4 {
+    margin-bottom: 10px;
+}
+
+.info code {
+    display: inline-block;
+    background: var(--bg);
+    color: var(--primary);
+    padding: 8px;
+    border-radius: 6px;
+    margin-top: 12px;
+    font-size: 12px;
+    overflow-wrap: anywhere;
+}
+
+footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+    padding: 20px;
+}
+
+@media (max-width: 950px) {
+    .layout {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    nav {
+        grid-column: 1 / -1;
+    }
+
+    nav ul {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 16px;
+    }
+
+    header h2 {
+        font-size: 19px;
+    }
+
+    #mode {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    main {
+        padding: 25px 15px;
+    }
+
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    nav, .panel, .output {
+        padding: 18px;
+    }
+}
