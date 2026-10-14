@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FunctionLab | JavaScript Playground</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/5968/5968292.png">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h2>ƒ FunctionLab</h2>
+        <button id="mode">Math Mode</button>
+    </header>
+
+    <main>
+        <section class="intro">
+            <p>INTERACTIVE LEARNING SPACE</p>
+            <h1 id="heading">Explore String Functions</h1>
+            <span>Experiment with JavaScript functions and see instant results.</span>
+        </section>
+
+        <section class="layout">
+            <nav>
+                <h3 id="navTitle">STRING FUNCTIONS</h3>
+                <ul id="navList"></ul>
+            </nav>
+
+            <section class="panel">
+                <h2 id="opTitle">String Length</h2>
+                <p id="opDesc">Find the number of characters in a string.</p>
+
+                <form id="form">
+                    <div id="fields"></div>
+                    <button type="submit" class="primary">Run Operation</button>
+                </form>
+            </section>
+
+            <aside class="output">
+                <h3>Output Console</h3>
+                <div class="result">
+                    <small id="status">YOUR RESULT</small>
+                    <h2 id="result">Your result will appear here.</h2>
+                </div>
+                <p id="message">Select a function and enter your values.</p>
+                <div class="actions">
+                    <button type="button" id="copy">Copy Result</button>
+                    <button type="button" id="reset">Reset</button>
+                </div>
+                <div class="info">
+                    <h4>About this function</h4>
+                    <p id="info">Explore JavaScript's built-in functions.</p>
+                    <code id="example">text.length</code>
+                </div>
+            </aside>
+        </section>
+    </main>
+
+    <footer>Built with HTML, CSS and JavaScript · FunctionLab</footer>
+</body>
+</html>
