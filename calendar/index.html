@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Calendar</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Monthly Calendar</h2>
+
+        <input type="number" id="year" placeholder="Year" min="1">
+        <select id="month">
+            <option value="">Select Month</option>
+            <option value="0">January</option>
+            <option value="1">February</option>
+            <option value="2">March</option>
+            <option value="3">April</option>
+            <option value="4">May</option>
+            <option value="5">June</option>
+            <option value="6">July</option>
+            <option value="7">August</option>
+            <option value="8">September</option>
+            <option value="9">October</option>
+            <option value="10">November</option>
+            <option value="11">December</option>
+        </select>
+
+        <button onclick="generate()">Generate Calendar</button>
+        <button onclick="resetCalendar()">Reset</button>
+
+        <h3 id="title"></h3>
+        <div id="calendar"></div>
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
