@@ -161,6 +161,12 @@
             gap: 24px;
         }
 
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
         .nav-link {
             color: var(--muted);
             font-size: 14px;
@@ -883,6 +889,7 @@
         .footer-links {
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
             gap: 20px;
         }
 
@@ -1021,26 +1028,35 @@
             }
         }
 
-        @media (max-width: 560px) {
+        @media (max-width: 640px) {
             .navbar {
-                height: 68px;
+                height: 64px;
             }
 
             .brand {
                 font-size: 20px;
+                gap: 10px;
             }
 
             .brand-mark {
                 width: 36px;
                 height: 36px;
+                border-radius: 10px;
             }
 
-            .nav-right {
-                gap: 14px;
+            .brand-mark .icon {
+                width: 20px;
+                height: 20px;
             }
 
-            .nav-link {
-                font-size: 13px;
+            .nav-links {
+                display: none;
+            }
+
+            .theme-btn {
+                width: 38px;
+                height: 38px;
+                border-radius: 11px;
             }
 
             .hero-actions {
@@ -1098,9 +1114,36 @@
                 padding-bottom: 64px;
             }
 
+            .site-footer {
+                padding: 28px 0;
+            }
+
             .footer-inner {
-                flex-direction: column;
-                align-items: flex-start;
+                flex-direction: column-reverse;
+                align-items: center;
+                text-align: center;
+                gap: 18px;
+            }
+
+            .footer-links {
+                justify-content: center;
+                gap: 8px;
+                width: 100%;
+            }
+
+            .footer-links a {
+                padding: 6px 12px;
+                background: var(--bg);
+                border: 1px solid var(--border);
+                border-radius: 999px;
+                font-size: 12px;
+            }
+
+            .footer-copy {
+                width: 100%;
+                padding-top: 16px;
+                border-top: 1px solid var(--border);
+                font-size: 12px;
             }
 
             .back-top {
@@ -1216,9 +1259,11 @@
                 <span>Assign<span>Hub.</span></span>
             </a>
             <nav class="nav-right" aria-label="Main navigation">
-                <a class="nav-link" href="#home">Home</a>
-                <a class="nav-link" href="#projects">My Projects</a>
-                <a class="nav-link" href="./assets/docs/Web%20Report.pdf" target="_blank" rel="noopener noreferrer">Report</a>
+                <div class="nav-links">
+                    <a class="nav-link" href="#home">Home</a>
+                    <a class="nav-link" href="#projects">My Projects</a>
+                    <a class="nav-link" href="./assets/docs/Web%20Report.pdf" target="_blank" rel="noopener noreferrer">Report</a>
+                </div>
                 <button class="theme-btn" id="themeToggle" type="button" aria-label="Switch to dark mode" title="Switch theme">
                     <svg class="icon"><use href="#i-moon"></use></svg>
                 </button>
